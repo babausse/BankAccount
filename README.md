@@ -31,12 +31,12 @@ _Astuce_ : Vous pouvez utiliser la méthode statique `Thread.sleep` pour délaye
 Le résultat devra être de la forme :
 
 ```
-+------------------+--------------+-----------------+---------+
-| Numéro de compte | Propriétaire | Type dopération | Montant |
-+------------------+--------------+-----------------+---------+
-| 1                | M. Durant    | Retrait         | 100     |
-| 1                | M. Durant    | Crédit          | 200     |
-+------------------+--------------+-----------------+---------+
++------------------+--------------+---------------------+-----------------+---------+
+| Numéro de compte | Propriétaire | timestamp           | Type dopération | Montant |
++------------------+--------------+---------------------+-----------------+---------+
+| 1                | M. Durant    | 2023-01-23 14:00:00 |       Retrait   | 100     |
+| 1                | M. Durant    | 2023-01-23 14:00:02 |       Crédit    | 200     |
++------------------+--------------+---------------------+-----------------+---------+
 ```
 
 (La mise en forme sous forme de tableau n'est pas obligatoire, mais les données doivent être présentes dans l'affichage)
@@ -44,3 +44,5 @@ Le résultat devra être de la forme :
 ### 3. Historique de la banque entière
 
 Implémentez une méthode dans la classe `Bank`, Qui prendra une liste de noms en paramètres et renverra l'ensemble de leurs opérations, triées par timestamp, et indiquant sur quel compte a été faite chaque opération.
+
+Le format des résultats devra être le même que pour la liste des opérations d'un seul compte en banque
