@@ -15,6 +15,9 @@ public class Bank {
     }
 
     public BankAccount search(String name) {
-
+        for(BankAccount account : this.accounts) {
+            if (account.getOwner().equals(name)) return account;
+        }
+        throw new AccountsNotFoundException(name);
     }
 }
