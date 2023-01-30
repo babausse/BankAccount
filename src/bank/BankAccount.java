@@ -1,13 +1,18 @@
 package bank;
 
+import history.AccountHistory;
+
 public class BankAccount {
     private int balance;
 
     private String owner;
 
+    private AccountHistory history;
+
     public BankAccount(String owner) {
         this.balance = 0;
         this.owner = owner;
+        this.history = new AccountHistory();
     }
 
     public void deposit(int amount) {
@@ -24,5 +29,9 @@ public class BankAccount {
 
     public String getOwner() {
         return this.owner;
+    }
+
+    public AccountHistory getHistory() {
+        return this.history;
     }
 }
